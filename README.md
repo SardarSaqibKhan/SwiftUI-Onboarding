@@ -6,7 +6,7 @@ Onboarding plays a crucial role in modern apps, helping to engage users and intr
 ## Demo
 The video below demonstrates the onboarding experience in action:
 
-![Image of Yaktocat](./static/onboarding.gif)
+![Image of Yaktocat](./Gif/onboarding.gif)
 
 ## Instructions
 Update `OnboardingDataModel.swift` with your data, each entry in the array will add new onboarding screen.
