@@ -12,24 +12,39 @@ The video below demonstrates the onboarding experience in action:
 Update `OnboardingDataModel.swift` with your data, each entry in the array will add new onboarding screen.
 
 ```swift
-extension OnboardingDataModel {
-    static var data: [OnboardingDataModel] = [
-        OnboardingDataModel(image: "onboarding-relax", heading: "Welcome to App", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
-        OnboardingDataModel(image: "onboarding-lookingatart", heading: "Explore the World", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
-        OnboardingDataModel(image: "onboarding-sharing1", heading: "Live Life Baby", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
-        OnboardingDataModel(image: "onboarding-security1", heading: "Work Hard", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
-        OnboardingDataModel(image: "onboarding-showclients", heading: "Stay Careless", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
+extension OnboardingModel {
+    static let dataSource = [
+            OnboardingModel(
+                id: 1,
+                title: "Walking",
+                description: "Take your first step toward a healthier lifestyle. Walking helps improve stamina, mood, and overall well-being.",
+                imageName: "figure.walk"
+            ),
+            OnboardingModel(
+                id: 2,
+                title: "Running",
+                description: "Boost your endurance and stay fit with personalized running plans. Track your pace, distance, and goals.",
+                imageName: "figure.run"
+            ),
+            OnboardingModel(
+                id: 3,
+                title: "Basket Ball",
+                description: "Jump into fast-paced gameplay! Practice your shots, monitor performance, and level up your basketball skills.",
+                imageName: "figure.basketball"
+            ),
+            OnboardingModel(
+                id: 4,
+                title: "Archery",
+                description: "Focus, aim, and release! Archery helps build concentration and precision. Master the skill with guided sessions.",
+                imageName: "figure.archery"
+            ),
+            OnboardingModel(
+                id: 5,
+                title: "Badminton",
+                description: "Smash your way to fitness with energetic badminton drills. Track rallies, improve reaction time, and play like a pro.",
+                imageName: "figure.badminton"
+            )
     ]
 }
-```
 
-## Tricks
-For hooking into `Done` button click I have implemented escaping closure.
-
-```swift
-OnboardingViewPure(data: data, doneFunction: {
-    /// Update your state here
-    self.onboardinDone = true
-    print("done onboarding")
-})
 ```
