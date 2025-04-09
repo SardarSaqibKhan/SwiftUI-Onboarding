@@ -1,10 +1,10 @@
 # SwiftUI-Onboarding
 
 ## About
-Onboarding/slider with swiping gesture written entirely in SwiftUI.
+Onboarding plays a crucial role in modern apps, helping to engage users and introduce them to key features. This demo project is built entirely with SwiftUI and showcases a clean and structured approach to implementing an onboarding experience. It serves as a helpful reference for developers looking to integrate engaging animations and user-friendly onboarding flows in their apps.
 
 ## Demo
-Video is worth a thousand words
+The video below demonstrates the onboarding experience in action:
 
 ![Image of Yaktocat](./static/onboarding.gif)
 
