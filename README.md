@@ -48,3 +48,64 @@ extension OnboardingModel {
 }
 
 ```
+## Instructions
+ landing view `OnboardingApp.swift` showing/hiding by using Userdefualt.
+
+```swift
+import SwiftUI
+
+@main
+struct OnboardingApp: App {
+    @AppStorage("hasSeenOnboardingView") private var hasSeenOnboardingView = false
+ 
+    var body: some Scene {
+        WindowGroup {
+            if hasSeenOnboardingView {
+                ContentView()
+            } else {
+                OnboardingView {
+                    hasSeenOnboardingView = true 
+                }
+            }
+        }
+    }
+}
+```
+
+```swift
+struct OnboardingView: View {
+    @State private var currentPage: Int = 1
+    
+    var totalPages: Int {
+        OnboardingModel.dataSource.count
+    }
+    
+    var onBoardingDatasource: [OnboardingModel] {
+        OnboardingModel.dataSource
+    }
+    
+    var onSkip: () -> Void
+    
+    var body: some View {
+        ZStack {
+            Image("backgroundImage")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .edgesIgnoringSafeArea(.all)
+           
+            VStack {
+                skipButton
+                
+                onboardingTabView
+                
+                navigationButtons
+            }
+            .padding()
+        }
+        
+    }
+.
+.
+.
+```
